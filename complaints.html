@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Complaints | Swachh</title>
+  <link rel="stylesheet" href="http://localhost/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://localhost/static/css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/" style="font-family: 'Raleway', sans-serif;">Swachh</a>
+    </div>
+    <div class="collapse navbar-collapse" style="font-family: 'Raleway', sans-serif;">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+        <li><a href="app">Get the app!</a></li>
+        <li><a id="cmp_id" target="blank" href="/complaints.html" >Complaints</a></li>
+        <li><a href="#" style="padding-right: 100px" onclick="showLogin()">SignIn/Signup</a></li>
+      </ul>
+    </div>
+  </div>
+    <div id="map"></div>
+    <div id="complaint-images"><button onclick="images_fn()">Images</button></div>
+    
+
+    <div id="signin-signup" style="display:none; margin-top:100px;" class="col-md-4">
+      <div id="signIn">
+        <h4 style="text-align: center">Login</h4>
+        <form role="form">
+        <label>Email</label>
+          <input type="text" placeholder="Email" class="form-control" id="login_email">
+          <label>Password</label>
+          <input type="password" placeholder="Password" class="form-control" id="login_pass">
+          <div class="sign"><button onclick="signin()" class="btn btn-primary" style="font-family: 'Raleway', sans-serif;">Sign In</button></div>
+        </form>
+      </div>
+      <hr>
+      <div id="signUp" style="padding">
+        <h4 style="text-align: center">Sign Up!</h4>
+        <form role="form">
+          <label>Name</label>
+          <input type="text" placeholder="Name" class="form-control" id='signup_name'>
+          <label>Email</label>
+          <input type="text" placeholder="Email" class="form-control" id='signup_email'>
+          <label>Phone</label>
+          <input type="text" placeholder="Phone" class="form-control" id='signup_phone'>
+          <label>Password</label>
+          <input type="password" placeholder="Password" class="form-control" id='signup_pass'>
+          <div class="sign"><button onclick="signup()" class="btn btn-primary">Sign Up</button></div>
+        </form>
+      </div>
+    </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/static/js/noang.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB1BCYX_Oc4_xbP3LsPzdoXL3uj4Ra_5WI&callback=initMap"></script>
+    
+
+  </body>
+</html>

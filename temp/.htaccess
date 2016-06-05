@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !\.(gif|jpe?g|png|css|js|xml|json|pdf|svg)$
+RewriteRule .* / [L,R=302]

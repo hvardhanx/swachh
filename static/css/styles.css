@@ -1,0 +1,57 @@
+.body {
+	margin-top: 50px;
+	padding: 10px 10px 10px 10px;
+
+}
+.pic{
+	background: url('/static/images/img1.jpg') no-repeat fixed center ;
+	  background-size: cover;
+}
+img {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-left: -(X/2)px;
+    margin-top: -(Y/2)px;
+}
+#txt{
+	position: absolute;
+    top: 40%;
+    left: 40%;
+    margin-left: -(X/2)px;
+    margin-top: -(Y/2)px;
+}
+.btn1{
+	position: relative;
+	margin-top: 50px ;
+}
+.dontShowWhenNotLoggedIn{
+	display: none;
+}
+.showWhenLoggedIn {
+	display: block;
+}
+#signin-signup{
+	position: absolute;
+    top: 2%;
+    left: 34%;
+    margin-left: -(X/2)px;
+    margin-top: -(Y/2)px;
+}
+.sign{
+	padding: 10px;
+}
+label{
+	font-family: 'Raleway', sans-serif;
+}
+.contain {
+max-width:960px;
+text-align:center;
+}
+
+.category {
+position:relative;
+display: inline-block;
+float:left;
+padding:10px;
+}

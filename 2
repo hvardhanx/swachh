@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Map</title>
+<meta name="viewport" content="initial-scale=1.0">
+<meta charset="utf-8">
+<style>
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+#map {
+height: 100%;
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+
+var map;
+function initMap() {
+	var myLatLng  = {lat: 23.3393562, lng: 85.3161996}; 
+	var myLatLngA = [{lat: 23.3393562, lng: 85.3161996}, {lat: 23.3493562, lng: 85.3151996}, {lat: 23.338562, lng: 85.317996}];
+map = new google.maps.Map(document.getElementById('map'), {
+center: myLatLng,
+zoom: 15
+});
+var marker = [];
+for(i = 0; i < myLatLngA.length; ++i){
+console.log(myLatLngA[i]) ;
+marker[i] = new google.maps.Marker({
+    position: new google.maps.LatLng(myLatLngA[i].lat, myLatLngA[i].lng),
+    map: map,
+    icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+i+'|FE6256|000000',
+  });
+google.maps.event.addListener(marker[i], 'click', callNumber);
+}
+}
+function callNumber() {
+//alert("Num: "+ this.position.toString());
+console.log(this.position.toUrlValue());
+}
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1BCYX_Oc4_xbP3LsPzdoXL3uj4Ra_5WI&callback=initMap"
+        async defer></script>
+  </body>
+</html>
